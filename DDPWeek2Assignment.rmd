@@ -1,0 +1,38 @@
+---
+title: "Developing Data Products Week 2 Assignment"
+author: "RS"
+date: "4 10 2020"
+output: html_document
+---
+
+
+
+
+```{r setup, include=FALSE}
+library(knitr)
+library(leaflet)
+library(dplyr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Print the current time:
+
+```{r}
+Sys.time()
+```
+
+## Map
+
+Print an map:
+
+```{r, echo=FALSE}
+myMap <- leaflet() %>%
+  addTiles() %>%
+addMarkers(lat=48.3253431, lng= 10.0134748, popup = "Home is where you heart is")
+
+myMap
+```
+
+
